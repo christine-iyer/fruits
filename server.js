@@ -28,11 +28,12 @@ mongoose.connection.once('open', () => {
 /*Start Middleware */
 
 app.use(methodOverride('_method'))
-
+app.use(express.static('public'))
 /* END Middleware */
 
 // Mount Routes
 /*Start Routes */
+
 
 
 // INDEX --- READ --- GET

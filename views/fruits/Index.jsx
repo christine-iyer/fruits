@@ -1,21 +1,19 @@
 const React = require('react');
+const Default = require('../layouts/Default.jsx')
+
 
 class Index extends React.Component{
     render(){
         const {fruits} = this.props
         return(
-            <div>
-                <h1>Fruits Index Page</h1>
-                <nav>
-                    <a href="/fruits/new">Create a New Fruit</a>
-                </nav>
+            <Default title="Fruits Index Page">
                 <ul>
                     {
                         fruits.map((fruit) => {
-                            const {name, color, readyToEat} = fruit
+                            const {name, color, readyToEat, _id} = fruit
                             return (
-                                <li key={fruit._id}>
-                                    <a href={`/fruits/${fruit._id}`}>
+                                <li key={_id}>
+                                    <a href={`/fruits/${_id}`}>
                                     {name}</a> is {color}
                                     
                                      <br/>
@@ -25,7 +23,7 @@ class Index extends React.Component{
                                         'It\'s not ready to eat'
                                     }
                                     <br/>
-                                    <form method="POST" action={`/fruits/${fruit._id}?_method=DELETE`}>
+                                    <form method="POST" action={`/fruits/${_id}?_method=DELETE`}>
                                         <input type="submit" value={`Delete ${color} ${name}`}/>
                                     </form>
                                 </li>
@@ -33,7 +31,7 @@ class Index extends React.Component{
                         })
                     }
                 </ul>
-            </div>
+            </Default>
         )
     }
 }
