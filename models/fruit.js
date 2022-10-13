@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 
 //Make a Schema
