@@ -3,7 +3,6 @@ require('dotenv').config()
 const express = require('express')
 const methodOverride = require('method-override')
 const db = require('./models/db')
-// Create our express app
 const app = express()
 
 // Configure the app (app.set)
@@ -15,20 +14,14 @@ app.use((req, res, next) => {
 })
 app.engine('jsx', require('jsx-view-engine').createEngine())
 app.set('view engine', 'jsx') // register the jsx view engine
-
-/* END CONFIG */
-
-// Mount our middleware (app.use)
-
+db.once('open', () => {
+  console.log('connected to MongoDB Atlas')
+})
 /*Start Middleware */
-
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use('/fruits', require('./controllers/routeController'))
 /* END Middleware */
-
-// Mount Routes
-
 
 // Tell the app to listen on a port
 app.listen(3000, () => {
