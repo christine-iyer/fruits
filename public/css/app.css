@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa%7CRighteous');
 
 body {
-  background: url(https://images.clipartlogo.com/files/istock/previews/8741/87414357-apple-seamless-pastel-colors-pattern-fruits-texture-background.jpg);
+  background: url(https://www.fabmood.com/wp-content/uploads/2022/04/wallpaper-iphone.jpg);
   margin: 0;
   font-family: 'Comfortaa', cursive;
 }
@@ -20,11 +20,12 @@ a {
   text-decoration: none;
   text-shadow: 1px 1px 1px black;
   font-size: 1.5em;
-  background: rgba(193, 235, 187, .9);
+  background: rgba(226, 182, 53, .2);
+  margin-left: -1em;
 }
 
 a:hover {
-  color: ghostwhite;
+  color: rgb(209,117,117);
 }
 
 li {
@@ -42,7 +43,8 @@ input[type=text] {
 input[type=submit] {
   padding: .3em;
   color: orange;
-  background: mediumseagreen;
+  background: rgb(197,43,54);
   font-size: 1em;
   border-radius: 10%;
+  font-size: 8px;
 }
