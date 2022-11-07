@@ -15,13 +15,12 @@ h1 {
   text-align: center;
 }
 
-a {
+a, a > button {
   color: orange;
   text-decoration: none;
   text-shadow: 1px 1px 1px black;
   font-size: 1.5em;
-  background: rgba(226, 182, 53, .2);
-  margin-left: -1em;
+  background: rgba(193, 235, 187, .9);
 }
 
 a:hover {
@@ -44,7 +43,6 @@ input[type=submit] {
   padding: .3em;
   color: orange;
   background: rgb(197,43,54);
-  font-size: 1em;
   border-radius: 10%;
   font-size: 8px;
 }
