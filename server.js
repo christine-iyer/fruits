@@ -49,3 +49,10 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('Listening on Port 3000')
 })
+// in your code
+const PORT = process.env.PORT || 8000
+
+// at the bottom
+app.listen(PORT, () => {
+  console.log('We in the building', PORT)
+})
