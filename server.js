@@ -3,6 +3,8 @@ require('dotenv').config()
 const express = require('express')
 const methodOverride = require('method-override')
 const cors = require('cors')
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const db = require('./models/db')
 const app = express()
 
@@ -19,6 +21,16 @@ app.set('view engine', 'jsx') // register the jsx view engine
 db.once('open', () => {
   console.log('connected to MongoDB Atlas')
 })
+
+app.use(
+  session({
+    secret: process.env.SECRET,
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
+    saveUninitialized: true,
+    resave: false,
+  })
+)
+
 /* Start Middleware */
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
@@ -28,5 +40,5 @@ app.use('/user', require('./controllers/authController'))
 
 // Tell the app to listen on a port
 app.listen(3000, () => {
-  console.log('Listening on Port 3000')
+  console.log('Listening on Port 3001')
 })
