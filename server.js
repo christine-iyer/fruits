@@ -10,9 +10,10 @@ const app = express()
 
 // Configure the app (app.set)
 /* Start Config */
+app.use(cors())
 app.use(express.urlencoded({ extended: true })) // This code makes us have req.body <=============
 app.use(express.json())
-app.use(cors())
+
 app.use((req, res, next) => {
   res.locals.data = {}
   next()
