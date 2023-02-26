@@ -14,8 +14,8 @@ class Default extends React.Component {
             <a href='/fruits'><button>Go to Fruits</button></a>
             <a href='/fruits/new'><button>Create a New Fruit</button></a>
             {title === 'Login to Fruits Account' || title === 'Sign Up For Fruits' ? '' : <a href="/user/logout"><button>Logout</button></a>}
-            {fruit ? <a href={`/fruits/${fruit._id}/edit`}> {fruit.name} Edit Page </a> : ''}
-            {fruit ? <a href={`/fruits/${fruit._id}`}>{fruit.name} Show Page</a> : ''}
+            {fruit ? <a href={`/fruits/${fruit._id}/edit`}> {fruit.symbol} Edit Page </a> : ''}
+            {fruit ? <a href={`/fruits/${fruit._id}`}>{fruit.symbol} Show Page</a> : ''}
           </nav>
           <h1>
             {title}
