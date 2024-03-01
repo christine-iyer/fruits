@@ -1,11 +1,12 @@
 const mongoose = require('mongoose')
 
 // Make A Schema
-const fruitSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  color: { type: String, required: true },
-  readyToEat: Boolean,
-  username: String
+const fruitSchema = new Schema({
+  symbol: { type: String, required: true },
+  purchasePrice: { type: Number, default: 0 },
+  shares: { type: Number, default: 0 },
+  regularMarketDayHigh: { type: Number, default: 0 },
+  fullExchangeName: { type: String }
 })
 
 // Make A Model From The Schema

@@ -7,9 +7,9 @@ class Edit extends React.Component {
     return (
       <Default title={`${name} Edit Page`} fruit={this.props.fruit}>
         <form method='POST' action={`/fruits/${_id}?_method=PUT`}>
-          Name: <input type='text' name='name' defaultValue={name} /><br />
-          Color: <input type='text' name='color' defaultValue={color} /><br />
-          Is Ready To Eat: <input type='checkbox' name='readyToEat' defaultChecked={readyToEat} /> <br />
+          <Symbol></Symbol>: <input type='text' name='symbol' defaultValue={symbol} /><br />
+          PurchasePrice: <input type='text' name='purchasePrice' defaultValue={purchasePrice} /><br />
+          Shares: <input type='checkbox' name='shares' defaultChecked={shares} /> <br />
           <input type='submit' value='Edit Fruit' />
         </form>
       </Default>

@@ -14,6 +14,7 @@
 </html>
 ```
 
+<<<<<<< HEAD
 # Revisit and Update
 
 I've been going through apps and making notes about where they may be useful. In particular, I'd like to highlight that this app separates the CRUD functionality into different pages. All of the MERN apps combine all of the functions into a single page. So I wanted to explore the show page. 
@@ -25,3 +26,8 @@ Overall I love this app!
 ## Annotations
 
 ![](./notes.png)
+=======
+### Updates
+
+## Annotations
+>>>>>>> 7d3219df5ca65a7fa48477173f6291183e5fd43a
