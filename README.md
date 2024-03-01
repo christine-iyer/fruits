@@ -13,3 +13,15 @@
 </body>
 </html>
 ```
+
+# Revisit and Update
+
+I've been going through apps and making notes about where they may be useful. In particular, I'd like to highlight that this app separates the CRUD functionality into different pages. All of the MERN apps combine all of the functions into a single page. So I wanted to explore the show page. 
+
+Overall I love this app!
+
+![](./fruitsApp.png)
+
+## Annotations
+
+![](./notes.png)

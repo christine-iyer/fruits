@@ -8,7 +8,10 @@ const dataController = {
         res.status(400).send({
           msg: err.message
         })
-      } else {
+      } else { 
+
+
+
         res.locals.data.fruits = foundFruits
         next()
       }
